@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <!-- We add the custom control style we created to generic.xaml which is a special xaml file used by WPF style lookup.  This makes it so that it can be discovered at run time and applied implicitly to all KeySwitchControlTypes.
+        An alternative would be to explicitly reference our style by name when we created the control in the view model-->
+        <ResourceDictionary
+            Source="/NationalInstruments.VeriStand.CustomControlsExamples;component/KeySwitchControlTemplate.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:niControls="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Controls"
+                    xmlns:ni="http://schemas.ni.com/controls/2009/xaml/presentation"
+                    xmlns:customControlsExamples="clr-namespace:NationalInstruments.VeriStand.CustomControlsExamples">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/NationalInstruments.Controls.SkinProviders.Numerics;component/IDESkins/Numerics/BaseNumerics/BaseKnob.IDE.WPF.xaml" />
+        <!-- This is the template I copied as a starting point:
+        <ResourceDictionary Source="/NationalInstruments.Controls.SkinProviders.Numerics;component/metallicskins/knobint32.metallic.wpf.xaml" />-->
+    </ResourceDictionary.MergedDictionaries>
+    <!--This style inherits from the base style provided by the controls team.  If I needed to make more major changes we could also provide a new control template here but since
+    we just need to change some colors and properties we leave the control template alone and just modify the pointer template and some other properties-->
+    <Style TargetType="customControlsExamples:KeySwitchControl" BasedOn="{StaticResource BaseKnob}">
+        <Setter Property="Range" Value="0,2,Int32" />
+        <Setter Property="ScaleArc">
+            <Setter.Value>
+                <niControls:ArcSweep StartAngle="0" SweepAngle="-45" />
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

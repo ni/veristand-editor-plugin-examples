@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="NationalInstruments.VeriStand.CustomControlsExamples.PulseWidthModulationControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:ni="http://schemas.ni.com/controls/2009/xaml/presentation"
+             xmlns:customControlsExamples="clr-namespace:NationalInstruments.VeriStand.CustomControlsExamples"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary
+                    Source="/NationalInstruments.Controls.SkinProviders.Numerics;component/IDESkins/NumericTextBoxDouble.IDE.WPF.xaml" />
+                <ResourceDictionary
+                    Source="/NationalInstruments.Controls.SkinProviders.Numerics;component/IDESkins/SliderDouble.IDE.WPF.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock>Frequency (Hz):</TextBlock>
+                    <ni:NumericTextBoxDouble x:Name="FrequencyTextBox" ValueChanged="FrequencyTextBox_OnValueChanged" MinWidth="100" MaxWidth="100" Margin="0,0,10,0" Value="{Binding FrequencyValue,  RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type customControlsExamples:PulseWidthModulationControl}}}" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock>Duty Cycle (%):</TextBlock>
+                    <ni:NumericTextBoxDouble x:Name="DutyCycleTextBox" ValueChanged="DutyCycleTextBox_OnValueChanged" Maximum="100.0" Minimum="0.0" MinWidth="100" MaxWidth="100" Value ="{Binding DutyCycleValue,  RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type customControlsExamples:PulseWidthModulationControl}}}" />
+                </StackPanel>
+            </StackPanel>
+            <ni:SliderDouble Margin="0,20,0,20" x:Name="DutyCycleSlider" MinHeight="50" ValueChanged="DutyCycleSlider_OnValueChanged" PreviewMouseLeftButtonDown="HandlePreviewMouseLeftButtonDown" PreviewMouseLeftButtonUp="HandlePreviewMouseLeftButtonUp" HorizontalAlignment="Left" Minimum="0.0" MinWidth="150" MaxWidth="150"  Maximum="100.0" Value ="{Binding SliderDutyCycleValue,  RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type customControlsExamples:PulseWidthModulationControl}}}" />
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name ="NormalRadioButton" Margin="0,0,5,0"  Content="Normal" Click="NormalButton_OnClicked" />
+                <Button x:Name ="FaultToGroundRadioButton" Margin="0,0,5,0" Content="Fault Ground" Click="FaultToGroundButton_OnClicked" />
+                <Button x:Name ="FaultToHighButton" Content="Fault High" Click="FaultToHighButton_OnClicked" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>
