@@ -131,6 +131,7 @@
     <Compile Include="KeySwitchControlModel.cs" />
     <Compile Include="KeySwitchControlViewModel.cs" />
     <Compile Include="PluginNamespaceSchema.cs" />
+    <Compile Include="PluginCommandContentProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
