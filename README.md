@@ -1,26 +1,25 @@
-# Example code for extending and controlling the VeriStand Editor.
+# VeriStand Editor Plugin Examples
 
-We provide two example VeriStand Screen controls and supporting documentation to show how you could add your own controls to VeriStand.
+This repo contains two example C# screen controls that extend the VeriStand Editor. Use these examples and supporting documentation to learn how to add your own controls to VeriStand.
 
-# Getting Started
+## Getting Started
 
-## Installing
+### Dependencies
+* .NET - .NET 4.6.2 installed to your local machine. VeriStand is built against this version.
+* Compiler - Any C# editor and compiler that supports .NET 4.6.2. These examples were created with Visual Studio 2015.
 
-Clone or download this repo.
+### Using these Examples
 
-## Dependencies
-* .NET - VeriStand is built against .NET 4.6.2, which you will need installed on your local machine.
-* Compiler - This example was created with Visual Studio 2015, but any C# editor and compiler should work as long as they support .NET 4.6.2.
+1. Clone or download this repo.
+1. Set VeriStand as your debug executable.
+1. Run the project.
+1. Locate the new palette in the screen document with two droppable controls.
 
-## Usage
+### Architecture
+For more information on the code provided, refer to [VeriStand Plugin Architecture](VeriStandCustomControls/ARCHITECTURE.md).
 
-To run, simply set VeriStand as your debug executable and run the project. You should see a new palette in your screen document with two droppable controls.
+## Support
 
-## Architecture
-Please read the [architecture page](VeriStandCustomControls/ARCHITECTURE.md) for details on the code provided.
-
-## Assistance
-
-This code is provided as is. VeriStand R&D will provide some help getting started/answering questions but support will be limited. Feel free to submit issues or documentation/example requests.
+This code is provided as is. The VeriStand team can provide assistance with getting started and other questions, but support will be limited. You may submit issues, documentation, and example requests.
 
 ## [License](LICENSE)
