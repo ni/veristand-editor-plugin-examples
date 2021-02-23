@@ -8,10 +8,7 @@ VeriStand uses the [MEF Framework](https://docs.microsoft.com/en-us/dotnet/frame
 1. Place the plugin in a known directory. The *.csproj* file copies the built output to the plugin directory. If your file path is different, update the [project file](CustomControlsExamples.csproj).
 >     <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Users\Public\Documents\National Instruments\NI VeriStand 2020\Custom UI Manager Controls\"</PostBuildEvent>
 
-2. Create an assembly that identifies as providing plugin components by adding the following attribute to the *AssemblyInfo.cs* file.
-> [assembly: NationalInstruments.Composition.ParticipatesInComposition]
-
-3. Use attributes to identify individual plugin classes.
+2. Use attributes to identify individual plugin classes.
 > [Export(typeof(TYPENAME))] // Or this may be a derived attribute.
 
 ### WPF
@@ -37,3 +34,20 @@ The VeriStand team recommends writing your control independent of the framework 
 
 ## Known Issues
 1. Palette Icons - *.png* files were deprecated as palette icons in favor of a vector rendering software. This technology is not easy to share externally. New controls will display a **?** icon in the palette. The VeriStand team will look in to adding this support back for VeriStand 2020 R3.
+
+## Customizing the Application
+
+### Add, Remove or Rename Commands
+The term command generally means menus, toolbar items, context menus and properties pane configuration. All of these are customizable via a plugin derived from IPushCommandContent. The example provides such a plugin in the class [PluginCommandContentProvider](PluginCommandContentProvider.cs). Customization includes:
+* Hiding a command
+* Disabling a command
+* Changing the text associated with a command
+* Overriding the behavior of a command to do something different
+* Adding a command to the menus, toolbar, context menus and properties pane. Including those for a selected item.
+
+### Advanced Customization
+Full customization of the application is restricted to the IApplicationFeatureSet. There can only be one of these, and it must be provided by the executable, thus the VeriStand.CustomApplication project and the [CustomApplicationFeatureSet](CustomApplicationFeatureSet.cs) class. The feature set can customize more than IPushCommandContent, with some examples below:
+* Filter out any plugin in the environment. In the example we show how to filter out unwanted tool windows.
+* Provide a different splash screen and application name.
+* Define what docking (user ability to drag windows around) is allowed.
+* Provide a custom welcome screen(see CreateLauncherControl) when the application is launched, or just remove the existing one.
