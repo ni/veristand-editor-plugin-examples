@@ -37,17 +37,22 @@ The VeriStand team recommends writing your control independent of the framework 
 
 ## Customizing the Application
 
-### Add, Remove or Rename Commands
-The term command generally means menus, toolbar items, context menus and properties pane configuration. All of these are customizable via a plugin derived from IPushCommandContent. The example provides such a plugin in the class [PluginCommandContentProvider](PluginCommandContentProvider.cs). Customization includes:
-* Hiding a command
-* Disabling a command
-* Changing the text associated with a command
-* Overriding the behavior of a command to do something different
-* Adding a command to the menus, toolbar, context menus and properties pane. Including those for a selected item.
+### Add, Remove, or Rename Commands
+The term *command* generally refers to menus, toolbar items, context menus, and properties pane configuration. These items can be customized through a plugin derived from *IPushCommandContent*. The example provides such a plugin in the [PluginCommandContentProvider](PluginCommandContentProvider.cs) class.
+
+Customization options include:
+* Hiding a command.
+* Disabling a command.
+* Changing the text associated with a command.
+* Overriding the behavior of a command with another behavior.
+* Adding a command to the menus, toolbar, context menus, and properties pane. This includes those for a selected item.
 
 ### Advanced Customization
-Full customization of the application is restricted to the IApplicationFeatureSet. There can only be one of these, and it must be provided by the executable, thus the VeriStand.CustomApplication project and the [CustomApplicationFeatureSet](CustomApplicationFeatureSet.cs) class. The feature set can customize more than IPushCommandContent, with some examples below:
-* Filter out any plugin in the environment. In the example we show how to filter out unwanted tool windows.
-* Provide a different splash screen and application name.
-* Define what docking (user ability to drag windows around) is allowed.
-* Provide a custom welcome screen(see CreateLauncherControl) when the application is launched, or just remove the existing one.
+Full customization of the application is restricted to the *IApplicationFeatureSet*. There can only be one *IApplicationFeatureSet*, and it must be provided by the executable through the *VeriStand.CustomApplication* project and the [CustomApplicationFeatureSet](CustomApplicationFeatureSet.cs) class.
+
+The feature set can customize more than *IPushCommandContent*. Other examples include:
+* Filtering out any plugin from the environment. The example demonstrates how to filter unwanted tool windows.
+* Providing a different splash screen and application name.
+* Defining what *docking*, or the user ability to drag windows, is allowed.
+* Providing a custom welcome screen (see *CreateLauncherControl*) when the application is launched.
+* Removing the existing welcome screen.

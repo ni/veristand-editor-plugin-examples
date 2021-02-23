@@ -1,8 +1,8 @@
 # VeriStand Editor Plugin Examples
 
-This repo contains examples for configuring and extending the VeriStand Editor. Some of the features displayed are:
-* The ability to create custom C# controls for the VeriStand Screen.
-* The ability to customize the editor - removing menu items, toolbar items, tool windows and configuration pane editors.
+This repo contains example code that configures and extends the VeriStand Editor. These examples demonstrate how to:
+* Create custom C# screen controls.
+* Customize the IDE with menu items, toolbar items, tool windows, and configuration pane editors.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ This repo contains examples for configuring and extending the VeriStand Editor. 
 
 ### Using these Examples
 1. Clone or download this repo.
-1. Update the VeriStandDir constant in the csproj files if you are using a different version of VeriStand, or a different path.
+1. If you are using a different version of VeriStand or a different file path location, update the *VeriStandDir* constant in the *.csproj* files.
 
 #### Custom Controls
 1. Set VeriStand as your debug executable.
@@ -20,10 +20,13 @@ This repo contains examples for configuring and extending the VeriStand Editor. 
 1. Locate the new palette in the screen document with two droppable controls.
 
 #### Custom Editor
-1. If using Visual Studio, run as an Administrator and build. This is needed for the post build step to copy the exe into the VeriStand directory. Otherwise, manually perform this step.
-1. Set VeriStand.CustomApplication to start an external program, selecting the exe that has been copied to the VeriStand install directory and run it.
-1. The IDE customization is not on by default - you can enable through File >> Preferences >> Example tab. This will require a restart.
-1. See the IDE with a custom splash screen and most IDE menus and tool windows removed.
+1. Run the editor as an administrator and build. This will allow the post build step to copy the executable into the VeriStand directory. Otherwise, you will have to manually copy and move the executable.
+1. Set *VeriStand.CustomApplication* to start an external program.
+1. Select the copied executable in the VeriStand install directory and run it.
+1. Enable IDE customization by selecting **File** > **Preferences** > **Example**.
+1. Restart VeriStand.
+
+The IDE will now have a custom splash screen with most menus and tool windows removed.
 
 ### Architecture
 For more information on the code provided, refer to [VeriStand Plugin Architecture](VeriStandCustomControls/ARCHITECTURE.md).
