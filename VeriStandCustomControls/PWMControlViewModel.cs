@@ -290,8 +290,14 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
 
         private static void SelectChannels(ICommandParameter parameter, IEnumerable<IViewModel> selection, ICompositionHost host, DocumentEditSite site)
         {
-            IEnumerable<string> frequencyChannels = selection.Select(item => item.Model).OfType<PulseWidthModulationControlModel>().Select(model => model.FrequencyChannel).ToList();
-            IEnumerable<string> dutyCycleChannels = selection.Select(item => item.Model).OfType<PulseWidthModulationControlModel>().Select(model => model.DutyCycleChannel).ToList();
+            IEnumerable<string> frequencyChannels = selection.Select(item => item.Model)
+                .OfType<PulseWidthModulationControlModel>()
+                .Select(model => model.FrequencyChannel)
+                .ToList();
+            IEnumerable<string> dutyCycleChannels = selection.Select(item => item.Model)
+                .OfType<PulseWidthModulationControlModel>()
+                .Select(model => model.DutyCycleChannel)
+                .ToList();
             host.GetSharedExportedValue<SystemDefinitionPaletteControl>().SelectNodes(dutyCycleChannels.Concat(frequencyChannels));
         }
 

@@ -67,7 +67,13 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
     /// <summary>
     /// Model class which defines the business logic for the PWM Control.
     /// </summary>
-    public class PulseWidthModulationControlModel : VisualModel, ISubscribeProviderStatusUpdates
+    public class PulseWidthModulationControlModel :
+        VisualModel,
+#if MUTATE2020R4
+        IDataEngineStateChangeObserver
+#else
+        ISubscribeProviderStatusUpdates
+#endif
     {
         /// <summary>
         /// The name to use for serialization of this model.  This name must match the name used in the Target xml in the ICustomVeriStandControl interface
@@ -281,6 +287,18 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
         /// </summary>
         /// <returns>awaitable task</returns>
         public Task OnDisconnectedAsync()
+        {
+            return Task.CompletedTask;
+        }
+
+        /// <inheritdoc/>
+        public Task OnStartAsync()
+        {
+            return Task.CompletedTask;
+        }
+
+        /// <inheritdoc/>
+        public Task OnShutdownAsync()
         {
             return Task.CompletedTask;
         }

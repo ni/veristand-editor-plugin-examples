@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeriStandCustomControls", "VeriStandCustomControls\CustomControlsExamples.csproj", "{7519BA21-FBB9-4DB3-AD5F-B3951A1B7E27}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlsExamples", "VeriStandCustomControls\CustomControlsExamples.csproj", "{7519BA21-FBB9-4DB3-AD5F-B3951A1B7E27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VeriStand.CustomApplication", "VeriStand.CustomApplication\VeriStand.CustomApplication.csproj", "{FAEE9A43-2D93-4EDF-A2C6-379F75C775E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7519BA21-FBB9-4DB3-AD5F-B3951A1B7E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7519BA21-FBB9-4DB3-AD5F-B3951A1B7E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7519BA21-FBB9-4DB3-AD5F-B3951A1B7E27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAEE9A43-2D93-4EDF-A2C6-379F75C775E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAEE9A43-2D93-4EDF-A2C6-379F75C775E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAEE9A43-2D93-4EDF-A2C6-379F75C775E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAEE9A43-2D93-4EDF-A2C6-379F75C775E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
