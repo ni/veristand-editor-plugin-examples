@@ -35,4 +35,6 @@ For more information on the code provided, refer to [VeriStand Plugin Architectu
 
 This code is provided as is. The VeriStand team can provide assistance with getting started and other questions, but support will be limited. You may submit issues, documentation, and example requests.
 
+## [Contributing](CONTRIBUTING.md)
+
 ## [License](LICENSE)
