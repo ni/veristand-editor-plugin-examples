@@ -1,33 +1,27 @@
-# Contributing to veristand-editor-plugin-examples 
+# Contributing to VeriStand Editor Plugin Examples
 
 Contributions to veristand-editor-plugin-examples are welcome from all!
 
-veristand-editor-plugin-examples is managed via [git](https://git-scm.com), with the canonical upstream
-repository hosted on [GitHub](https://github.com/ni/veristand-editor-plugin-examples/).
+The veristand-editor-plugin-examples repo is managed via [git](https://git-scm.com). The canonical upstream
+repository is hosted on [GitHub](https://github.com/ni/veristand-editor-plugin-examples/).
 
-veristand-editor-plugin-examples follows a pull-request model for development.  If you wish to
-contribute, you will need to create a GitHub account, fork this project, push a
-branch with your changes to your project, and then submit a pull request.
+This project follows a pull-request model for development. To contribute to the repo, you must:
+1. Create a GitHub account.
+1. Fork this project.
+1. Sign off on your commits, such as by using `git commit -s` in the command line client. This will amend your git commit message with a line in the following format: `Signed-off-by: Name Lastname <name.lastmail@emailaddress.com>`.
+1. Include all authors of any given commit into the commit message with a `Signed-off-by` line. This line indicates that you have read and signed the Developer Certificate of Origin (see below) and are able to legally submit your code to this repository.
+1. Push a branch with your changes to the project.
+1. Submit a pull request.
 
-Please remember to sign off your commits (e.g., by using `git commit -s` if you
-are using the command line client). This amends your git commit message with a line
-of the form `Signed-off-by: Name Lastname <name.lastmail@emailaddress.com>`. Please
-include all authors of any given commit into the commit message with a
-`Signed-off-by` line. This indicates that you have read and signed the Developer
-Certificate of Origin (see below) and are able to legally submit your code to
-this repository.
-
-See [GitHub's official documentation](https://help.github.com/articles/using-pull-requests/) for more details.
+For more information, refer to [GitHub's official documentation](https://help.github.com/articles/using-pull-requests/).
 
 # Getting Started
 
-Please ensure the solution builds for your version of VeriStand. If you add code that calls into new APIs, please ensure
-that you use a constant defined in the project and #if statements to allow previous versions to build.
+Ensure the solution builds for your version of VeriStand. To add code that calls into new APIs, use a constant defined in the project and *#if* statements to allow previous versions to build.
 
 # Testing
 
-Currently the examples are just manually tested. Changes to the CustomApplicationFeatureSet require running VeriStand.CustomApplication
-to verify.
+The examples are manually tested. Changes to the *CustomApplicationFeatureSet* require running *VeriStand.CustomApplication* to verify.
 
 # Developer Certificate of Origin (DCO)
 
@@ -59,5 +53,4 @@ to verify.
 
 (taken from [developercertificate.org](https://developercertificate.org/))
 
-See [LICENSE](https://github.com/ni/veristand-editor-plugin-examples/blob/master/LICENSE)
-for details about how veristand-editor-plugin-examples is licensed.
+For more information on how veristand-editor-plugin-examples is licensed, refer to the [LICENSE](https://github.com/ni/veristand-editor-plugin-examples/blob/master/LICENSE).
