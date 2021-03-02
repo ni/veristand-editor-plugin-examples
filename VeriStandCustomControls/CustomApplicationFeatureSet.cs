@@ -68,7 +68,9 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
         private readonly HashSet<string> _allowedCommands = new HashSet<string>(new string[]
         {
             MenuPathCommands.FileMenu.UniqueId,
-            ShellCommands.Options.UniqueId
+            MenuPathCommands.FileOpenMenu.UniqueId,
+            ShellCommands.OpenProject.UniqueId,
+            ShellCommands.Options.UniqueId,
         });
 
         /// <summary>
@@ -93,6 +95,18 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
             }
 
             return base.CanExecuteCommand(command, sender, commandParameter, editSite, ref handled);
+        }
+
+        /// <inheritdoc/>
+        public override PlatformVisual CreateLauncherControl()
+        {
+            if (ExamplePreferencePageController.HideEditor)
+            {
+                // Command disabling kills the templates as well. Just use the open project command line flag, or double click on a project in explorer to open.
+                return null;
+            }
+
+            return base.CreateLauncherControl();
         }
     }
 

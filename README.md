@@ -9,6 +9,9 @@ This repo contains example code that configures and extends the VeriStand Editor
 ### Dependencies
 * .NET - .NET 4.6.2 installed to your local machine. VeriStand is built against this version.
 * Compiler - Any C# editor and compiler that supports .NET 4.6.2. These examples were created with Visual Studio 2015.
+note: Some Visual Studio options can cause the app to crash. If using Visual Studio, it is recommended to turn off options for:
+* Enable XAML Hot Reload
+* Enable UI Debugging Tools for XAML (older version of the above option)
 
 ### Using these Examples
 1. Clone or download this repo.
