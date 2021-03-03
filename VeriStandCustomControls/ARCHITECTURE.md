@@ -32,9 +32,6 @@ To define a control, you need:
 ## Recommendations
 The VeriStand team recommends writing your control independent of the framework first and then creating the appropriate plugin pieces to expose the control within the VeriStand IDE.
 
-## Known Issues
-1. Palette Icons - *.png* files were deprecated as palette icons in favor of a vector rendering software. This technology is not easy to share externally. New controls will display a **?** icon in the palette. The VeriStand team will look in to adding this support back for VeriStand 2020 R3.
-
 ## Customizing the Application
 
 ### Add, Remove, or Rename Commands

@@ -34,7 +34,7 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
         /// <summary>
         /// Path to the image to use in the palette
         /// </summary>
-        public string ImagePath => string.Empty;
+        public string ImagePath => "/NationalInstruments.VeriStand.CustomControlsExamples;component/Resources/TestIcon_32x32.png";
 
         /// <summary>
         /// Tool tip to display in the palette
@@ -52,7 +52,7 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
         /// hierarchy list or use a category with the same unique id.  Unique IDs cannot be duplicated at different hierarchy levels.
         /// </summary>
         public IList<PaletteElementCategory> PaletteHierarchy =>
-            new List<PaletteElementCategory>() { new PaletteElementCategory("Fancy Switches", string.Empty, "FancySwitches", .1) };
+            new List<PaletteElementCategory>() { new PaletteElementCategory("Fancy Switches", ImagePath, "FancySwitches", .1) };
     }
 
     /// <summary>
