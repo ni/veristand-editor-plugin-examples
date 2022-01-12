@@ -293,12 +293,15 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
             IEnumerable<string> frequencyChannels = selection.Select(item => item.Model)
                 .OfType<PulseWidthModulationControlModel>()
                 .Select(model => model.FrequencyChannel)
+                .Where(channel => !string.IsNullOrEmpty(channel))
                 .ToList();
             IEnumerable<string> dutyCycleChannels = selection.Select(item => item.Model)
                 .OfType<PulseWidthModulationControlModel>()
                 .Select(model => model.DutyCycleChannel)
+                .Where(channel => !string.IsNullOrEmpty(channel))
                 .ToList();
-            host.GetSharedExportedValue<SystemDefinitionPaletteControl>().SelectNodes(dutyCycleChannels.Concat(frequencyChannels));
+            var systemDefinitionPalette = SystemDefinitionPaletteControl.Activate(site);
+            systemDefinitionPalette.SelectNodes(dutyCycleChannels.Concat(frequencyChannels));
         }
 
         /// <summary>
