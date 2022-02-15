@@ -31,7 +31,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <VeriStandDir>c:\Program Files\National Instruments\VeriStand 2020</VeriStandDir>
-    <DefineConstants>MUTATE2020;MUTATE2020R4</DefineConstants>
+    <DefineConstants>MUTATE2020;MUTATE2020R4;MUTATE2021</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NationalInstruments.Controls">
