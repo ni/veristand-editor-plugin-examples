@@ -230,7 +230,11 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
                 MessageScope?.AllMessages.ClearMessageByCategoryAndReportingElement(
                     PwmControlModelErrorString,
                     this);
+#if MUTATE2021
+                this.SafeReportError(PwmControlModelErrorString, null, MessageDescriptor.Empty, ex);
+#else
                 this.ReportError(PwmControlModelErrorString, null, MessageDescriptor.Empty, ex);
+#endif
             });
         }
 
@@ -648,7 +652,11 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
                         {
                             Host.Dispatcher.InvokeIfNecessary(
                                 PlatformDispatcher.AsyncOperationAlwaysValid,
+#if MUTATE2021
+                                () => this.SafeReportError(
+#else
                                 () => this.ReportError(
+#endif
                                     PwmControlModelErrorString,
                                     null,
                                     MessageDescriptor.Empty,
