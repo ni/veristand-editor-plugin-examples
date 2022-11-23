@@ -94,9 +94,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-  <!-- Note: You will need to run visual studio as an Adminstrator for this to work, but makes it easiest to test changes quickly -->
+    <!-- Note: You will need to run visual studio as an Adminstrator for this to work, but makes it easiest to test changes quickly -->
     <PostBuildEvent>xcopy /y "$(TargetDir)NationalInstruments.VeriStand.CustomControlsExamples.dll" "$(VeriStandDir)"
-xcopy /y $(TargetPath) "$(VeriStandDir)"</PostBuildEvent>
+xcopy /y "$(TargetPath)" "$(VeriStandDir)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
