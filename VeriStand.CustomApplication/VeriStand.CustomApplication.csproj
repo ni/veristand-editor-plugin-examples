@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <VeriStandDir>c:\Program Files\National Instruments\VeriStand 2023</VeriStandDir>
+    <VeriStandDir>c:\Program Files\National Instruments\VeriStand 2024</VeriStandDir>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="NationalInstruments.Core">
