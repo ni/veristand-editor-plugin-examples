@@ -106,7 +106,7 @@ namespace NationalInstruments.VeriStand.CustomControlsExamples
         /// <summary>
         /// List of keys to ignore when pressed over the adorner
         /// </summary>
-        private static List<Key> _keysToEat = new List<Key>()
+        private static readonly List<Key> _keysToEat = new List<Key>()
         {
             Key.Up, Key.Down, Key.Left, Key.Right, Key.PageDown, Key.PageUp, Key.Home, Key.End
         };
