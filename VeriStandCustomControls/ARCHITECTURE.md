@@ -6,7 +6,7 @@ This document provides a high level overview of the components required to plugi
 ### MEF
 VeriStand uses the [MEF Framework](https://docs.microsoft.com/en-us/dotnet/framework/mef/) as the basis of its plugin model. To use a plugin with VeriStand:
 1. Place the plugin in a known directory. The *.csproj* file copies the built output to the plugin directory. If your file path is different, update the [project file](CustomControlsExamples.csproj).
->     <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Users\Public\Documents\National Instruments\NI VeriStand 2024\Custom UI Manager Controls\"</PostBuildEvent>
+>     <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Users\Public\Documents\National Instruments\NI VeriStand 2025\Custom UI Manager Controls\"</PostBuildEvent>
 
 2. Use attributes to identify individual plugin classes.
 > [Export(typeof(TYPENAME))] // Or this may be a derived attribute.

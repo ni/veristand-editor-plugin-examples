@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup>
-    <VeriStandDir>c:\Program Files\National Instruments\VeriStand 2024</VeriStandDir>
+    <VeriStandDir>c:\Program Files\National Instruments\VeriStand 2025</VeriStandDir>
     <DefineConstants>MUTATE2020;MUTATE2020R4;MUTATE2021</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
@@ -177,6 +177,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Users\Public\Documents\National Instruments\NI VeriStand 2024\Custom UI Manager Controls\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Users\Public\Documents\National Instruments\NI VeriStand 2025\Custom UI Manager Controls\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
