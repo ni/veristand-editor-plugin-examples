@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NationalInstruments.VeriStand.CustomControlsExamples</RootNamespace>
     <AssemblyName>NationalInstruments.VeriStand.CustomControlsExamples</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkProfile />
@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <PropertyGroup>
-    <VeriStandDir>c:\Program Files\National Instruments\VeriStand 2025</VeriStandDir>
+    <VeriStandDir>c:\Program Files\National Instruments\VeriStand 2026</VeriStandDir>
     <DefineConstants>MUTATE2020;MUTATE2020R4;MUTATE2021</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
@@ -177,6 +177,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Users\Public\Documents\National Instruments\NI VeriStand 2025\Custom UI Manager Controls\"</PostBuildEvent>
+    <PostBuildEvent>xcopy /y "$(TargetPath)" "C:\Users\Public\Documents\National Instruments\NI VeriStand 2026\Custom UI Manager Controls\"</PostBuildEvent>
   </PropertyGroup>
 </Project>
